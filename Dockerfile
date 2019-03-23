@@ -1,4 +1,4 @@
-FROM debian:stable
+FROM debian:stretch
 ENV VERSION 2.3.7
 MAINTAINER Ahmed <ahmed@okda.space>
 
