@@ -3,7 +3,7 @@ ENV VERSION 2.3.7
 MAINTAINER Ahmed <ahmed@okda.space>
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y btrfs-tools apt-utils \
-	sqlite3 libcurl3 libfuse2 \
+	sqlite3 libcurl3 lsb-release libcurl3-gnutls apt-utils libfuse2 \
 	&& apt-get clean && rm -rf /var/lib/apt/lists/*
 ADD https://hndl.urbackup.org/Server/${VERSION}/urbackup-server_${VERSION}_amd64.deb /root/install.deb
 RUN echo /var/urbackup | dpkg -i /root/install.deb && rm /root/install.deb
